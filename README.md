@@ -24,13 +24,21 @@ the /face_detection directory.
    > The `target` is a single number: 1 if the corresponding input image shows a face, or 0 otherwise.
    Thus, the target tensor is 2D. It has shape Nx1.
    
-3. Train the model using the 64x64_data.npz dataset:
+3. Train the model using the 64x64_data.npz data:
 
     ```bash
     (venv) $ ./train_face_detection.py --input 64x64_data.npz [--lr 1e-4] [--epochs 100] [--batch_size 200]
     ```
     
-4. The script /face_detection/window_detection.py runs the face classifier on a sliding window over an input image. 
+ 4. Test the model using the unseen test_data.npz:
+ 
+    ```bash
+    (venv) $ ./train_face_detection.py --input test_data.npz [--lr 1e-4] [--epochs 100] [--batch_size 200]
+    ```
+    
+    My model achieves 0.966 test accuracy :tada:.
+ 
+5. The script /face_detection/window_detection.py runs the face classifier on a sliding window over an input image. 
 The script detects multiple faces on the input by sliding a window of various scales. 
 For example, given the following input image from the Yale Computer Science website:
 
