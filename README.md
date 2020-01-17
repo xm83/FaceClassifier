@@ -33,7 +33,7 @@ the /face_detection directory.
  4. Test the model using the unseen test_data.npz (download from [this link](https://drive.google.com/file/d/1G-kEjX86yy8e-tz3hthyFmEbZKBUDHtc/view?usp=sharing)):
  
     ```bash
-    (venv) $ ./evaluate_face_detection.py --input test_data.npz --logs_dir [logs directory] [--weights_filename weights.h5]
+    (venv) $ ./evaluate_face_detection.py --input test_data.npz --logs_dir <path to logs directory> [--weights_filename weights.h5]
     ```
     
     My model achieves 0.966 test accuracy :tada:.
