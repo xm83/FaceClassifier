@@ -3,7 +3,7 @@ A face classifier that detects the number of faces in a photo, based on training
 
 ## Key Steps to Run the Classifier :page_with_curl:
 1. Download a subset of the [Face Detection Dataset and Benchmark](http://vis-www.cs.umass.edu/fddb/) 
-from [this link](https://drive.google.com/open?id=1JIIalRu5WZQ01p-S6mBxzHV8ZMqAJcdH) and place it in 
+from [this link](https://drive.google.com/file/d/1Fz2pU_p6Vb61GzMGVIVc6nj4f8p8F7MG/view?usp=sharing) and place it in 
 the /face_detection directory.
 
    > The data is provided as a [numpy npz file](https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.savez.html). The .npz file format is a zipped archive of files named after the variables they contain. 
@@ -30,7 +30,7 @@ the /face_detection directory.
     (venv) $ ./train_face_detection.py --input 64x64_data.npz [--lr 1e-4] [--epochs 100] [--batch_size 200]
     ```
     
- 4. Test the model using the unseen test_data.npz (not included):
+ 4. Test the model using the unseen test_data.npz (download from [this link](https://drive.google.com/file/d/1G-kEjX86yy8e-tz3hthyFmEbZKBUDHtc/view?usp=sharing):
  
     ```bash
     (venv) $ ./train_face_detection.py --input test_data.npz [--lr 1e-4] [--epochs 100] [--batch_size 200]
