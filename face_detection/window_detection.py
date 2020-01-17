@@ -100,8 +100,6 @@ def make_predictions(im, model, scales=[50], stride = 10):
     correspond to: min_x, min_y, max_x, max_y, prob. The bounding box of a face is defined the by top-left
     corner (min_x,min_y) and the bottom-right corner (max_x, max_y).
     """
-
-    # TO-DO. Remove the line below and complete the function so that it returns bounding boxes.
     boxes = []
     for scale in scales:
         for y1 in range(0, im.shape[0] - scale, stride):
