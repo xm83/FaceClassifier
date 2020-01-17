@@ -65,11 +65,11 @@ For example, given the following input image from the Yale Computer Science webs
     
     Using the best threshold for the predicted probabilities, 0.4, the script also runs on 
     
-    <img src="shaocrew_0.jpg" alt="example input image"/>
+    <img src="shaocrew_0.jpg" width="600" alt="example input image"/>
     
     And produces the following output:
     
-    <img src="shaocrew.png" alt="example output image"/>
+    <img src="shaocrew.png" width="600" alt="example output image"/>
 
 
 ## Explanation
