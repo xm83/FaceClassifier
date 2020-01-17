@@ -52,7 +52,6 @@ def main(input_file, weights_file):
         prediction = np.zeros(prob.shape)
         prediction[prob > t] = 1
         # compute tpr and fpr based on the predictions and the target values from the dataset     
-        # TO-DO. complete
         tp = 0 # num of true pos
         fp = 0 # num of false pos
         p = 0 # num of pos
@@ -74,7 +73,6 @@ def main(input_file, weights_file):
         fpr.append(current_fpr)
     print(tpr, fpr)
     # pick threshold that minimizes l2 distance to top-left corner of the graph (fpr = 0, tpr = 1)
-    # TODO. Complete.
     # index of the threshold for which (fpr, tpr) get closest to (0,1) in the Euclidean sense
     min_dist = 3 # worst case is 1 + 1 = 2
     index = 0
