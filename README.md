@@ -30,7 +30,7 @@ the /face_detection directory.
     (venv) $ ./train_face_detection.py --input 64x64_data.npz [--lr 1e-4] [--epochs 100] [--batch_size 200]
     ```
     
- 4. Test the model using the unseen test_data.npz (download from [this link](https://drive.google.com/file/d/1G-kEjX86yy8e-tz3hthyFmEbZKBUDHtc/view?usp=sharing):
+ 4. Test the model using the unseen test_data.npz (download from [this link](https://drive.google.com/file/d/1G-kEjX86yy8e-tz3hthyFmEbZKBUDHtc/view?usp=sharing)):
  
     ```bash
     (venv) $ ./train_face_detection.py --input test_data.npz [--lr 1e-4] [--epochs 100] [--batch_size 200]
