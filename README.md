@@ -1,5 +1,5 @@
 # My Face Classifier
-A face classifier that detect the number of faces in a photo, based on training a deep learning model using the Keras API and the VGGnet neural network, and using OpenCV and the sliding window approach to detect faces on input images.
+A face classifier that detects the number of faces in a photo, based on training a deep learning model using the Keras API and the VGGnet neural network, and using OpenCV and the sliding window approach to detect faces on input images.
 
 ## Key Steps to Run the Classifier
 1. Download a subset of the [Face Detection Dataset and Benchmark](http://vis-www.cs.umass.edu/fddb/) 
@@ -36,7 +36,7 @@ For example, given the following input image from the Yale Computer Science webs
 
     <img src="cs50_2.jpg" width="600" alt="example input image"/>
     
-    The script should output face predictions to the screen:
+    The script outputs face predictions to the screen:
     
     ```bash
     (venv) $ ./window_detection.py --input ../cs50_2.jpg --logs_dir <path-to-logs-folder>
@@ -60,8 +60,7 @@ For example, given the following input image from the Yale Computer Science webs
 
     <img src="cs50.png" alt="example output image"/>
     
-    > The script uses non_max_suppression() function to 
-    group overlapping boxes together
+    I used the non_max_suppression() function to group overlapping boxes together.
     
     Using the best threshold for the predicted probabilities, 0.4, the script also runs on 
     
@@ -75,26 +74,23 @@ For example, given the following input image from the Yale Computer Science webs
 ## Explanation
 The `main` function of the  train_face_detection.py script:
 
-   a. Splits the input data into a training and validation set.
+   * Splits the input data into a training and validation set.
    
-   b. Normalizes the training data such that the pixel values are floats in [0,1] rather than integers in [0,255].
+   * Normalizes the training data such that the pixel values are floats in [0,1] rather than integers in [0,255].
    
-   c. Builds a convolutional neural network model with the TensorFlow Keras API to predict 
+   * Builds a convolutional neural network model with the TensorFlow Keras API to predict 
    whether the input image corresponds to the face of a person or not. The output of the
    network should be a probability (i.e., a float between 0 and 1) corresponding to the 
    likelihood that the input image shows a human face.
    
-   d. Trains the model based on the input arguments: batch_size, epochs, lr, val, logs_dir.
+   * Trains the model based on the input arguments: batch_size, epochs, lr, val, logs_dir.
    These arguments are all defined in the bottom section of the script, when they are
    added to the [ArgumentParser](https://docs.python.org/2/library/argparse.html).
    
-   e. After training, saves one file to disk:
+   * After training, saves one file to disk: **weights.h5:** model parameters. 
    
-   - **weights.h5:** model parameters. 
-   
-   The convolutional neural networks for image classification I implemented is VGGnet.
-
-
+The convolutional neural networks for image classification I implemented is VGGnet.
+    
 I also inspected how accuracy changes as a function of the threshold to better understand if 0.5 is a good threshold value for my classifier.
 The script /face_detection/plot_roc_curve.py computes predictions for all of the examples on the input data. Based on these predictions and the target values,
 It plots a [Receiver Operating Characteristic (ROC)](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) curve that 
