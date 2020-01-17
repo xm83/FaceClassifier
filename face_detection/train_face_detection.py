@@ -27,8 +27,7 @@ def normalize_data_per_row(data):
 
     # sanity checks!
     assert len(data.shape) == 4, "Expected the input data to be a 4D matrix"
-
-    # TODO. Complete.
+    
     pixels = np.asarray(data)
     # print('Data Type: %s' % pixels.dtype)
     # print('Min: %.3f, Max: %.3f' % (pixels.min(), pixels.max()))
@@ -57,8 +56,6 @@ def train_model(model, train_input, train_target, val_input, val_target, logs_di
     :param learning_rate: learning rate for gradient descent
     :param batch_size: batch size for training with gradient descent
     """
-    # TO-DO. Complete. Remove the pass line below, and add the necessary training code.
-    # normalize
 
     # compile the model: define optimizer, loss, and metrics
     model.compile(optimizer=tf.keras.optimizers.Adam(lr=learning_rate),
