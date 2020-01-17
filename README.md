@@ -62,7 +62,7 @@ For example, given the following input image from the Yale Computer Science webs
     
     I used the non_max_suppression() function to group overlapping boxes together.
     
-    Using the best threshold for the predicted probabilities, 0.4, the script also runs on 
+    Using the best threshold for the predicted probabilities, 0.4 (See Explanation for how I found it), the script also runs on 
     
     <img src="shaocrew_0.jpg" width="600" alt="example input image"/>
     
