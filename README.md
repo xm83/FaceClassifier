@@ -84,8 +84,6 @@ The `main` function of the  train_face_detection.py script:
    likelihood that the input image shows a human face.
    
    * Trains the model based on the input arguments: batch_size, epochs, lr, val, logs_dir.
-   These arguments are all defined in the bottom section of the script, when they are
-   added to the [ArgumentParser](https://docs.python.org/2/library/argparse.html).
    
    * After training, saves one file to disk: **weights.h5:** model parameters. 
    
