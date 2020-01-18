@@ -6,7 +6,7 @@ A face classifier that detects the number of faces in a photo, based on training
 from [this link](https://drive.google.com/file/d/1Fz2pU_p6Vb61GzMGVIVc6nj4f8p8F7MG/view?usp=sharing) and place it in 
 the /face_detection directory.
 
-   > The data is provided as a [numpy npz file](https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.savez.html). The .npz file format is a zipped archive of files named after the variables they contain. 
+   > The data is in the format of [numpy npz file](https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.savez.html). The .npz file format is a zipped archive of files named after the variables they contain. 
    The archive is not compressed and each file in the archive contains one variable in .npy format. 
    
 2. Run /face_detection/train_face_detection.py and load the training data with the following command:
